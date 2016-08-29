@@ -17,9 +17,16 @@
 		821B61E31D6EE6CA0074082D /* RMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B61E21D6EE6CA0074082D /* RMView.swift */; };
 		821B61E51D6EE6E50074082D /* RMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B61E41D6EE6E50074082D /* RMTableViewCell.swift */; };
 		821B61E71D6EE8460074082D /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B61E61D6EE8460074082D /* Define.swift */; };
+		82466CC71D73EEA80013B292 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CC51D73EEA80013B292 /* SearchCell.swift */; };
+		82466CC81D73EEA80013B292 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82466CC61D73EEA80013B292 /* SearchCell.xib */; };
+		82466CCB1D742EE30013B292 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CCA1D742EE30013B292 /* Webservice.swift */; };
+		8E3C889AFECB452268F89045 /* Pods_RealMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7785141CEDAA240636B211AE /* Pods_RealMusic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C745C3F16C7BF35B8D0ECF1 /* Pods-RealMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealMusic/Pods-RealMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		64D2C6EA4C9594FE6771CAC8 /* Pods-RealMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealMusic/Pods-RealMusic.release.xcconfig"; sourceTree = "<group>"; };
+		7785141CEDAA240636B211AE /* Pods_RealMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		821B61B61D6EE0590074082D /* RealMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821B61C01D6EE0590074082D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821B61C31D6EE0590074082D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +39,9 @@
 		821B61E21D6EE6CA0074082D /* RMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMView.swift; sourceTree = "<group>"; };
 		821B61E41D6EE6E50074082D /* RMTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTableViewCell.swift; sourceTree = "<group>"; };
 		821B61E61D6EE8460074082D /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		82466CC51D73EEA80013B292 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		82466CC61D73EEA80013B292 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		82466CCA1D742EE30013B292 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3C889AFECB452268F89045 /* Pods_RealMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFF9751E8CDB666C8D15C7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C745C3F16C7BF35B8D0ECF1 /* Pods-RealMusic.debug.xcconfig */,
+				64D2C6EA4C9594FE6771CAC8 /* Pods-RealMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A6C25BE776BF27012872F0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7785141CEDAA240636B211AE /* Pods_RealMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		821B61AD1D6EE0590074082D = {
 			isa = PBXGroup;
 			children = (
 				821B61B81D6EE0590074082D /* RealMusic */,
 				821B61B71D6EE0590074082D /* Products */,
+				1AFF9751E8CDB666C8D15C7F /* Pods */,
+				4A6C25BE776BF27012872F0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +153,7 @@
 		821B61D51D6EE39B0074082D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				82466CC91D742EBE0013B292 /* Webservice */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,10 +176,28 @@
 		821B61D91D6EE5610074082D /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				82466CC41D73EE900013B292 /* SearchCell */,
 				821B61DA1D6EE5750074082D /* SearchViewController.swift */,
 				821B61DB1D6EE5750074082D /* SearchViewController.xib */,
 			);
 			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		82466CC41D73EE900013B292 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				82466CC51D73EEA80013B292 /* SearchCell.swift */,
+				82466CC61D73EEA80013B292 /* SearchCell.xib */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		82466CC91D742EBE0013B292 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				82466CCA1D742EE30013B292 /* Webservice.swift */,
+			);
+			path = Webservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 821B61C81D6EE0590074082D /* Build configuration list for PBXNativeTarget "RealMusic" */;
 			buildPhases = (
+				4E540DBD5D789FB37D2C1FFA /* [CP] Check Pods Manifest.lock */,
 				821B61B21D6EE0590074082D /* Sources */,
 				821B61B31D6EE0590074082D /* Frameworks */,
 				821B61B41D6EE0590074082D /* Resources */,
+				6B7094ED35A97D783EC03ED3 /* [CP] Embed Pods Frameworks */,
+				A178BEFBA40D7FA750419665 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821B61C41D6EE0590074082D /* LaunchScreen.storyboard in Resources */,
+				82466CC81D73EEA80013B292 /* SearchCell.xib in Resources */,
 				821B61C11D6EE0590074082D /* Assets.xcassets in Resources */,
 				821B61DD1D6EE5750074082D /* SearchViewController.xib in Resources */,
 			);
@@ -217,18 +270,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E540DBD5D789FB37D2C1FFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B7094ED35A97D783EC03ED3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealMusic/Pods-RealMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A178BEFBA40D7FA750419665 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealMusic/Pods-RealMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		821B61B21D6EE0590074082D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				821B61DF1D6EE65A0074082D /* RMViewController.swift in Sources */,
+				82466CC71D73EEA80013B292 /* SearchCell.swift in Sources */,
 				821B61DC1D6EE5750074082D /* SearchViewController.swift in Sources */,
 				821B61E11D6EE69A0074082D /* RMNavigationController.swift in Sources */,
 				821B61D81D6EE39B0074082D /* AppDelegate.swift in Sources */,
 				821B61E51D6EE6E50074082D /* RMTableViewCell.swift in Sources */,
 				821B61E31D6EE6CA0074082D /* RMView.swift in Sources */,
 				821B61E71D6EE8460074082D /* Define.swift in Sources */,
+				82466CCB1D742EE30013B292 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +436,7 @@
 		};
 		821B61C91D6EE0590074082D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C745C3F16C7BF35B8D0ECF1 /* Pods-RealMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealMusic/Info.plist;
@@ -345,6 +449,7 @@
 		};
 		821B61CA1D6EE0590074082D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D2C6EA4C9594FE6771CAC8 /* Pods-RealMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealMusic/Info.plist;
@@ -374,6 +479,7 @@
 				821B61CA1D6EE0590074082D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

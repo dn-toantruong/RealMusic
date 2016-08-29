@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+//api.soundcloud.com/search?client_id=97effc2d5a8b1e15e9835c73497e6185&limit=10&offset=0&q=mot+nha
 struct ScreenSize
 {
     static let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
@@ -25,6 +25,15 @@ struct DeviceType
     static let IS_IPHONE_6P = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
     static let IS_IPHONE = UIDevice.currentDevice().userInterfaceIdiom == .Phone
     static let IS_IPAD = UIDevice.currentDevice().userInterfaceIdiom == .Pad
+}
+
+struct APISearch {
+    static let baseURL = "https://api.soundcloud.com/"
+    static let search = "search?"
+}
+
+struct Key {
+    static let clientId = "97effc2d5a8b1e15e9835c73497e6185"
 }
 
 // MARK: - ALERT BUTTON
