@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
         let initialViewController  = SearchViewController (nibName:"SearchViewController", bundle:nil)
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
-        let navigationController = UINavigationController(rootViewController: initialViewController)
+        let navigationController = RMNavigationController(rootViewController: initialViewController)
         navigationController.navigationBar.translucent = false
         window!.rootViewController = navigationController
         window!.makeKeyAndVisible()

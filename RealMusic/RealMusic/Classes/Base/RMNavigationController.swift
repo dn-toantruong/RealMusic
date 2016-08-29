@@ -12,7 +12,7 @@ class RMNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationBarHidden = true
         // Do any additional setup after loading the view.
     }
 
