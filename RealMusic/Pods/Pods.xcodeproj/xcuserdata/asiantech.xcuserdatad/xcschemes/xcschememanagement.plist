@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,25 +34,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DEF00D2962AC9077EC02E8387800EAD</key>
+		<key>05094CC4A047119F7ADC14EE74C4881C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>554CB52A883BF7EC904A9836D88DD936</key>
+		<key>0C42CA2B53DD11A488F298542BD378D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D004A9772D4C077E8ADA630EFCE8EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67F2D42B26F04610064828A68F0895B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7827B0A8D045F3AD829A02B6A849F7CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7ADE818D1F0B66C99B1ED45ABDC4DE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

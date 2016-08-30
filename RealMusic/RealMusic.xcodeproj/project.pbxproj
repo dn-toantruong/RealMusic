@@ -20,6 +20,8 @@
 		82466CC71D73EEA80013B292 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CC51D73EEA80013B292 /* SearchCell.swift */; };
 		82466CC81D73EEA80013B292 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82466CC61D73EEA80013B292 /* SearchCell.xib */; };
 		82466CCB1D742EE30013B292 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CCA1D742EE30013B292 /* Webservice.swift */; };
+		82BBDA811D752AE6009EB2D2 /* SongObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBDA801D752AE6009EB2D2 /* SongObject.swift */; };
+		82BBDA831D752E15009EB2D2 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBDA821D752E15009EB2D2 /* UserObject.swift */; };
 		8E3C889AFECB452268F89045 /* Pods_RealMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7785141CEDAA240636B211AE /* Pods_RealMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		82466CC51D73EEA80013B292 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		82466CC61D73EEA80013B292 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		82466CCA1D742EE30013B292 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		82BBDA801D752AE6009EB2D2 /* SongObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongObject.swift; sourceTree = "<group>"; };
+		82BBDA821D752E15009EB2D2 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		821B61D51D6EE39B0074082D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				82BBDA7F1D752A26009EB2D2 /* Object */,
 				82466CC91D742EBE0013B292 /* Webservice */,
 			);
 			path = Models;
@@ -198,6 +203,15 @@
 				82466CCA1D742EE30013B292 /* Webservice.swift */,
 			);
 			path = Webservice;
+			sourceTree = "<group>";
+		};
+		82BBDA7F1D752A26009EB2D2 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				82BBDA801D752AE6009EB2D2 /* SongObject.swift */,
+				82BBDA821D752E15009EB2D2 /* UserObject.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,10 +338,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				821B61DF1D6EE65A0074082D /* RMViewController.swift in Sources */,
+				82BBDA831D752E15009EB2D2 /* UserObject.swift in Sources */,
 				82466CC71D73EEA80013B292 /* SearchCell.swift in Sources */,
 				821B61DC1D6EE5750074082D /* SearchViewController.swift in Sources */,
 				821B61E11D6EE69A0074082D /* RMNavigationController.swift in Sources */,
 				821B61D81D6EE39B0074082D /* AppDelegate.swift in Sources */,
+				82BBDA811D752AE6009EB2D2 /* SongObject.swift in Sources */,
 				821B61E51D6EE6E50074082D /* RMTableViewCell.swift in Sources */,
 				821B61E31D6EE6CA0074082D /* RMView.swift in Sources */,
 				821B61E71D6EE8460074082D /* Define.swift in Sources */,
