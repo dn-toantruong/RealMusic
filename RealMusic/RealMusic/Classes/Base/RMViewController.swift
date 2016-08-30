@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class RMViewController: UIViewController {
 
@@ -26,13 +27,16 @@ class RMViewController: UIViewController {
     func setupData() { }
     
     // MARK: - Public
-//    func showLoading() {
+    func showLoading() {
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultAnimationType(.Flat)
+        SVProgressHUD.setDefaultMaskType(.Clear)
 //        SVProgressHUD.showWithMaskType(SVProgressHUDMaskType.Clear)
-//    }
-//    
-//    func hideLoading() {
-//        SVProgressHUD.dismiss()
-//    }
+    }
+    
+    func hideLoading() {
+        SVProgressHUD.dismiss()
+    }
     
     func showAlertWith(mTitle: String, message: String, completion: (action: AnyObject) -> ()) {
         let alertController = UIAlertController(title: mTitle, message: message, preferredStyle: .Alert)

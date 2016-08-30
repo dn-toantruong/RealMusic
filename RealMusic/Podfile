@@ -6,6 +6,7 @@ target 'RealMusic' do
     pod 'Alamofire'
     pod 'ObjectMapper'
     pod 'RealmSwift'
-
+    pod 'SVProgressHUD'
+    pod 'AlamofireImage'
 
 end

@@ -49,6 +49,11 @@
                     <constraint firstItem="ZK9-R9-0Fz" firstAttribute="leading" secondItem="pP0-zu-UfM" secondAttribute="trailing" constant="14" id="xpm-ve-qsh"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="artistLabel" destination="ZK9-R9-0Fz" id="UuV-Mu-1IM"/>
+                <outlet property="imageSong" destination="pP0-zu-UfM" id="tR6-Vo-a2q"/>
+                <outlet property="nameLabel" destination="WrS-Yh-oWZ" id="iZk-7M-4Wc"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

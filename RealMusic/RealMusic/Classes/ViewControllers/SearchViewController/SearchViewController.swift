@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class SearchViewController: RMViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    private var service = WebService()
+    private var songs = [Song]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,18 +28,36 @@ class SearchViewController: RMViewController {
     
     override func setupData() {
         super.setupData()
+        getJson()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
+    private func getJson() {
+        showLoading()
+        self.service.getURLSerchName("mot+nha", limit: 20, offset: 0) { (success, result, error) in
+            self.hideLoading()
+            if success {
+                if let result = result as? [[String: AnyObject]] {
+                    for dictionary in result {
+                        let song = Mapper<Song>().map(dictionary)
+                        self.songs.append(song!)
+                        self.tableView.reloadData()
+                    }
+                    print(self.songs.count)
+                }
+            }
+        }
+    }
 
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return songs.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -44,6 +66,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SearchCell") as! SearchCell
+        cell.configCell(songs[indexPath.row])
         return cell
     }
 }
