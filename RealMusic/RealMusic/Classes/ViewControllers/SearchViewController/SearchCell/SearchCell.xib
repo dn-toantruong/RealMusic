@@ -21,19 +21,19 @@
                             <constraint firstAttribute="width" constant="50" id="hxd-0t-b5e"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrS-Yh-oWZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrS-Yh-oWZ">
                         <rect key="frame" x="72" y="10" width="240" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="ab7-rV-fZG"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="15"/>
                         <color key="textColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-R9-0Fz">
-                        <rect key="frame" x="72" y="48" width="240" height="12"/>
-                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="72" y="46" width="240" height="10"/>
+                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -45,7 +45,7 @@
                     <constraint firstItem="WrS-Yh-oWZ" firstAttribute="leading" secondItem="pP0-zu-UfM" secondAttribute="trailing" constant="14" id="EX3-q2-1GK"/>
                     <constraint firstItem="pP0-zu-UfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="FL5-jb-qsl"/>
                     <constraint firstAttribute="trailingMargin" secondItem="WrS-Yh-oWZ" secondAttribute="trailing" id="NvH-On-dMZ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ZK9-R9-0Fz" secondAttribute="bottom" constant="1" id="f2q-1U-dGa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZK9-R9-0Fz" secondAttribute="bottom" constant="5" id="f2q-1U-dGa"/>
                     <constraint firstItem="ZK9-R9-0Fz" firstAttribute="leading" secondItem="pP0-zu-UfM" secondAttribute="trailing" constant="14" id="xpm-ve-qsh"/>
                 </constraints>
             </tableViewCellContentView>

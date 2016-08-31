@@ -249,6 +249,7 @@
 				TargetAttributes = {
 					821B61B51D6EE0590074082D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 733BU858ZJ;
 					};
 				};
 			};
@@ -455,11 +456,14 @@
 			baseConfigurationReference = 3C745C3F16C7BF35B8D0ECF1 /* Pods-RealMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RealMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ToanTV.RealMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.truongtoanha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -468,11 +472,14 @@
 			baseConfigurationReference = 64D2C6EA4C9594FE6771CAC8 /* Pods-RealMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RealMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ToanTV.RealMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.truongtoanha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

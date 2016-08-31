@@ -16,6 +16,10 @@ class SearchViewController: RMViewController {
     
     private var service = WebService()
     private var songs = [Song]()
+    private var isLoadMore = false
+    private var isSearch = false
+    private var indexSearch = 0
+    private var searchName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +32,7 @@ class SearchViewController: RMViewController {
     
     override func setupData() {
         super.setupData()
-        getJson()
+//        getJson(searchName, limit: 20, offset: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,18 +40,23 @@ class SearchViewController: RMViewController {
         
     }
     
-    private func getJson() {
+    private func getJson(searchName:String, limit: Int, offset: Int) {
         showLoading()
-        self.service.getURLSerchName("mot+nha", limit: 20, offset: 0) { (success, result, error) in
+        self.service.getURLSerchName(searchName, limit: limit, offset: offset) { (success, result, error) in
             self.hideLoading()
             if success {
                 if let result = result as? [[String: AnyObject]] {
+                    
+                    if !self.isLoadMore {
+                        self.songs.removeAll()
+                    }
                     for dictionary in result {
                         let song = Mapper<Song>().map(dictionary)
                         self.songs.append(song!)
                         self.tableView.reloadData()
                     }
-                    print(self.songs.count)
+                } else {
+                    self.isLoadMore = false
                 }
             }
         }
@@ -69,6 +78,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configCell(songs[indexPath.row])
         return cell
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let lastElement = songs.count - 1
+        if indexPath.row == lastElement && isLoadMore {
+            self.getJson(searchName, limit: 20, offset: 20)
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -77,5 +93,27 @@ extension SearchViewController: UISearchBarDelegate {
     }
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text!.isEmpty {
+            isSearch = false
+            tableView.reloadData()
+        } else {
+            isSearch = true
+            let whiteSpace = NSCharacterSet.whitespaceCharacterSet()
+            let searchText = searchBar.text
+            let range = searchText?.rangeOfCharacterFromSet(whiteSpace)
+            if let _ = range {
+                let searchText = searchText
+                indexSearch += 1
+                print(searchText)
+                getJson(searchText!, limit: 20, offset: 0)
+            } else {
+                indexSearch += 1
+                print(searchBar.text)
+                getJson(searchBar.text!, limit: 20, offset: 0)
+            }
+        }
     }
 }
