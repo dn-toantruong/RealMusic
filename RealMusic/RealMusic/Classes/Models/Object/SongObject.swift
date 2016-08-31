@@ -37,6 +37,23 @@ class Song: Object,Mappable {
     dynamic var comment_count = 0
     dynamic var attachments_uri = ""
     dynamic var user: User!
+    dynamic var first_name = ""
+    dynamic var website = ""
+    dynamic var city = ""
+    dynamic var username = ""
+    dynamic var full_name = ""
+    dynamic var online = ""
+    dynamic var followers_count = 0
+    dynamic var country = ""
+    dynamic var track_count = ""
+    dynamic var last_name = ""
+    dynamic var playlist_count = 0
+    dynamic var public_favorites_count = 0
+    dynamic var avatar_url = ""
+    dynamic var plan = ""
+    dynamic var myspace_name = ""
+    
+    
     
     override static func primaryKey() -> String? {
         return "id"
@@ -73,6 +90,21 @@ class Song: Object,Mappable {
         comment_count <- map["comment_count"]
         attachments_uri <- map["attachments_uri"]
         user <- map["user"]
+        first_name <- map["first_name"]
+        website <- map["website"]
+        city <- map["city"]
+        username <- map["username"]
+        full_name <- map["full_name"]
+        online <- map["online"]
+        followers_count <- map["followers_count"]
+        country <- map["country"]
+        track_count <- map["track_count"]
+        last_name <- map["last_name"]
+        playlist_count <- map["playlist_count"]
+        public_favorites_count <- map["public_favorites_count"]
+        avatar_url <- map["avatar_url"]
+        plan <- map["plan"]
+        myspace_name <- map["myspace_name"]
     }
     
 }

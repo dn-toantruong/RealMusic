@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SearchViewController.searchBar(UISearchBar, textDidChange : String) -&gt; ():SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchBar.text">
+            </PersistentString>
+            <PersistentString
+               value = "searchBar.text!.isEmpty ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchCell.configCell(Song) -&gt; ():SearchCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "object.user.username">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

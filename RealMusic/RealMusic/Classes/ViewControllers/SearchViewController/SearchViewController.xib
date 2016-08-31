@@ -40,6 +40,9 @@
                         <constraint firstAttribute="height" constant="44" id="w3p-3D-Joc"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2t9-L6-TzW"/>
+                    </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kL-qB-GoD">
                     <rect key="frame" x="0.0" y="108" width="375" height="559"/>
