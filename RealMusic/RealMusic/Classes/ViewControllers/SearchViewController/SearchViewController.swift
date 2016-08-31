@@ -16,7 +16,7 @@ class SearchViewController: RMViewController {
     
     private var service = WebService()
     private var songs = [Song]()
-    private var isLoadMore = false
+    private var isLoadMore = true
     private var isSearch = false
     private var indexSearch = 0
     private var searchName = ""
@@ -47,9 +47,14 @@ class SearchViewController: RMViewController {
             if success {
                 if let result = result as? [[String: AnyObject]] {
                     
-                    if !self.isLoadMore {
+//                    if !self.isLoadMore {
+//                        self.songs.removeAll()
+//                    }
+                    if self.isSearch {
                         self.songs.removeAll()
+                        self.isSearch = false
                     }
+                    self.isLoadMore = result.count > 0
                     for dictionary in result {
                         let song = Mapper<Song>().map(dictionary)
                         self.songs.append(song!)
@@ -80,18 +85,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animateWithDuration(0.35, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
         let lastElement = songs.count - 1
         if indexPath.row == lastElement && isLoadMore {
-            self.getJson(searchName, limit: 20, offset: 20)
+            self.getJson(searchName, limit: 20, offset: songs.count)
         }
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
     
@@ -105,15 +111,19 @@ extension SearchViewController: UISearchBarDelegate {
             let searchText = searchBar.text
             let range = searchText?.rangeOfCharacterFromSet(whiteSpace)
             if let _ = range {
-                let searchText = searchText
+                searchName = searchText!
                 indexSearch += 1
                 print(searchText)
-                getJson(searchText!, limit: 20, offset: 0)
+                getJson(searchName, limit: 20, offset: 0)
             } else {
                 indexSearch += 1
                 print(searchBar.text)
                 getJson(searchBar.text!, limit: 20, offset: 0)
             }
         }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        searchBar.resignFirstResponder()
     }
 }

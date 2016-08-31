@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,24 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztl-cZ-oWA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9z-Ab-4yi">
-                            <rect key="frame" x="147" y="19" width="80" height="25"/>
-                            <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="c5I-qx-Fm2"/>
-                        <constraint firstItem="r9z-Ab-4yi" firstAttribute="centerY" secondItem="Ztl-cZ-oWA" secondAttribute="centerY" id="gxC-il-a5M"/>
-                        <constraint firstItem="r9z-Ab-4yi" firstAttribute="centerX" secondItem="Ztl-cZ-oWA" secondAttribute="centerX" id="hsJ-iq-6Wl"/>
-                    </constraints>
-                </view>
-                <searchBar contentMode="redraw" placeholder="Play Any Song In The World" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-Sz-26h">
+                <searchBar contentMode="redraw" placeholder="Play Any Song In The World" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-Sz-26h">
                     <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="w3p-3D-Joc"/>
@@ -52,18 +35,45 @@
                         <outlet property="delegate" destination="-1" id="2lh-L4-uNN"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYG-Hl-f45">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="5y0-p0-9No"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztl-cZ-oWA">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9z-Ab-4yi">
+                            <rect key="frame" x="132.5" y="9" width="109" height="25"/>
+                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="c5I-qx-Fm2"/>
+                        <constraint firstItem="r9z-Ab-4yi" firstAttribute="centerY" secondItem="Ztl-cZ-oWA" secondAttribute="centerY" id="gxC-il-a5M"/>
+                        <constraint firstItem="r9z-Ab-4yi" firstAttribute="centerX" secondItem="Ztl-cZ-oWA" secondAttribute="centerX" id="hsJ-iq-6Wl"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="1kL-qB-GoD" firstAttribute="top" secondItem="ofS-Sz-26h" secondAttribute="bottom" id="Adm-d1-Pfi"/>
                 <constraint firstAttribute="bottom" secondItem="1kL-qB-GoD" secondAttribute="bottom" id="Bc2-le-hUG"/>
+                <constraint firstItem="IYG-Hl-f45" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OAt-Ds-wzx"/>
                 <constraint firstAttribute="trailing" secondItem="Ztl-cZ-oWA" secondAttribute="trailing" id="OrE-wz-c1e"/>
+                <constraint firstAttribute="trailing" secondItem="IYG-Hl-f45" secondAttribute="trailing" id="TYJ-ek-HM3"/>
                 <constraint firstItem="1kL-qB-GoD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y8Y-mj-2fU"/>
-                <constraint firstItem="Ztl-cZ-oWA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YAj-Y8-ZlX"/>
                 <constraint firstAttribute="trailing" secondItem="1kL-qB-GoD" secondAttribute="trailing" id="god-dj-dxj"/>
                 <constraint firstItem="Ztl-cZ-oWA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hZ9-Fd-tRD"/>
                 <constraint firstItem="ofS-Sz-26h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nM9-41-YOc"/>
                 <constraint firstItem="ofS-Sz-26h" firstAttribute="top" secondItem="Ztl-cZ-oWA" secondAttribute="bottom" id="otY-Tw-rRy"/>
+                <constraint firstItem="Ztl-cZ-oWA" firstAttribute="top" secondItem="IYG-Hl-f45" secondAttribute="bottom" id="qYY-OG-Od1"/>
+                <constraint firstItem="IYG-Hl-f45" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sqI-n9-ItG"/>
                 <constraint firstAttribute="trailing" secondItem="ofS-Sz-26h" secondAttribute="trailing" id="z4j-TM-JwG"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
