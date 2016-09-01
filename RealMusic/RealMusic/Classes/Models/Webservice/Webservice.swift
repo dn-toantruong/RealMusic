@@ -17,8 +17,7 @@ typealias APIControllerCallBack = (success: Bool, result: [AnyObject]?, error: N
 class WebService: NSObject {
     func getURLSerchName(name:String, limit:Int, offset:Int, completion: APIControllerCallBack) {
         let textSong = name.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-//        let searchText = textSong.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        let searchText = textSong.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let searchText = String(UTF8String: textSong.cStringUsingEncoding(NSUTF8StringEncoding)!)
         let parameter: [String: AnyObject] = ["client_id": Key.clientId,
                                               "q": searchText!,
                                               "limit": limit,
