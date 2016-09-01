@@ -16,10 +16,12 @@ class SearchViewController: RMViewController {
     
     private var service = WebService()
     private var songs = [Song]()
-    private var isLoadMore = true
+    private var isLoadMore = false
     private var isSearch = false
     private var indexSearch = 0
     private var searchName = ""
+    private var isLoad = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,18 +44,21 @@ class SearchViewController: RMViewController {
     
     private func getJson(searchName:String, limit: Int, offset: Int) {
         showLoading()
+        isLoad = true
         self.service.getURLSerchName(searchName, limit: limit, offset: offset) { (success, result, error) in
             self.hideLoading()
+            self.isLoad = false
             if success {
                 if let result = result as? [[String: AnyObject]] {
                     
 //                    if !self.isLoadMore {
 //                        self.songs.removeAll()
 //                    }
-                    if self.isSearch {
-                        self.songs.removeAll()
-                        self.isSearch = false
-                    }
+//                    if self.isSearch {
+//                        self.songs.removeAll()
+//                        self.isSearch = false
+//                    }
+                    self.songs.removeAll()
                     self.isLoadMore = result.count > 0
                     for dictionary in result {
                         let song = Mapper<Song>().map(dictionary)
@@ -71,6 +76,7 @@ class SearchViewController: RMViewController {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(songs.count)
         return songs.count
     }
     
@@ -104,6 +110,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text!.isEmpty {
             isSearch = false
+            songs.removeAll()
             tableView.reloadData()
         } else {
             isSearch = true
@@ -113,12 +120,22 @@ extension SearchViewController: UISearchBarDelegate {
             if let _ = range {
                 searchName = searchText!
                 indexSearch += 1
-                print(searchText)
-                getJson(searchName, limit: 20, offset: 0)
+                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+                dispatch_after(delayTime, dispatch_get_main_queue()) {
+                    if !self.isLoad {
+                        self.getJson( self.searchName, limit: 20, offset: 0)
+                    }
+                }
+                
             } else {
                 indexSearch += 1
-                print(searchBar.text)
-                getJson(searchBar.text!, limit: 20, offset: 0)
+                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+                dispatch_after(delayTime, dispatch_get_main_queue()) {
+                    if !self.isLoad {
+                        self.getJson(searchBar.text!, limit: 20, offset: 0)
+                    }
+                }
+               
             }
         }
     }
