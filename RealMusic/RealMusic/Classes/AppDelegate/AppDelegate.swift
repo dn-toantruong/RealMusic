@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
-        let initialViewController  = SearchViewController (nibName:"SearchViewController", bundle:nil)
+        let initialViewController  = DetailViewController (nibName:"DetailViewController", bundle:nil)
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
         let navigationController = RMNavigationController(rootViewController: initialViewController)
