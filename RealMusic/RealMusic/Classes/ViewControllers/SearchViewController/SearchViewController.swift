@@ -45,7 +45,7 @@ class SearchViewController: RMViewController {
     private func getJson(searchName:String, limit: Int, offset: Int) {
         showLoading()
         isLoad = true
-        self.service.getURLSerchName(searchName, limit: limit, offset: offset) { (success, result, error) in
+        self.service.getURLSearchName(searchName, limit: limit, offset: offset) { (success, result, error) in
             self.hideLoading()
             self.isLoad = false
             if success {
@@ -100,6 +100,30 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let songOB = songs[indexPath.row]
+        if songOB.kind == "track" {
+            if songOB.streamable == true {
+                let detailVC = DetailViewController.initialization()
+                detailVC.songs = songOB
+                navigationController?.pushViewController(detailVC, animated: true)
+            } else {
+                let userWebVC = UserViewController.initialization()
+                userWebVC.userUrlString = songOB.permalink_url
+                navigationController?.pushViewController(userWebVC, animated: true)
+            }
+        } else {
+            if songOB.permalink_url == "" {
+                print("khong co url")
+            } else {
+                let userWebVC = UserViewController.initialization()
+                userWebVC.userUrlString = songOB.permalink_url
+                navigationController?.pushViewController(userWebVC, animated: true)
+            }
+        }
+       
+    }
+    
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
         UIView.animateWithDuration(0.35, animations: {
@@ -111,6 +135,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {

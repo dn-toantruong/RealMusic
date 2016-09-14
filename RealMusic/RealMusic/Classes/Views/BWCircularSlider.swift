@@ -41,7 +41,7 @@ class BWCircularSlider: UIControl {
 
     var textField:UITextField?
     var radius:CGFloat = 0
-  var angle:Int = 32{
+  var angle:Int = 0{
     didSet {
       setNeedsDisplay()
     }
@@ -238,7 +238,7 @@ class BWCircularSlider: UIControl {
         let angleInt = Int(floor(currentAngle))
 
         //Store the new angle
-        angle = Int(32 - angleInt)
+        angle = Int(360 - angleInt)
 
         //Update the textfield
 //        textField!.text = "\(angle)"
@@ -274,7 +274,7 @@ class BWCircularSlider: UIControl {
         v.y /= vmag;
         let radians = Double(atan2(v.y,v.x))
         result = RadiansToDegrees(radians)
-        return (result >= 0  ? result : result + 32.0);
+        return (result >= 0  ? result : result + 360.0);
     }
 
 }

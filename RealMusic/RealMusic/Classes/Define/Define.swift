@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 //api.soundcloud.com/search?client_id=97effc2d5a8b1e15e9835c73497e6185&limit=10&offset=0&q=mot+nha
+//api.soundcloud.com/tracks/\(self.trackIDString)/stream?client_id=97effc2d5a8b1e15e9835c73497e6185
 struct ScreenSize
 {
     static let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
@@ -30,6 +31,8 @@ struct DeviceType
 struct APISearch {
     static let baseURL = "https://api.soundcloud.com/"
     static let search = "search?"
+    static let tracks = "tracks/"
+    static let stream = "stream?"
 }
 
 struct Key {

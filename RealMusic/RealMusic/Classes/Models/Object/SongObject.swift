@@ -23,6 +23,7 @@ class Song: Object,Mappable {
     dynamic var sharing = ""
     dynamic var tag_list = ""
     dynamic var permalink = ""
+    dynamic var streamable = false
     dynamic var embeddable_by = ""
     dynamic var genre = ""
     dynamic var title = ""
@@ -76,6 +77,7 @@ class Song: Object,Mappable {
         sharing <- map["sharing"]
         tag_list <- map["tag_list"]
         permalink <- map["permalink"]
+        streamable <- map["streamable"]
         embeddable_by <- map["embeddable_by"]
         genre <- map["genre"]
         title <- map["title"]
