@@ -24,6 +24,9 @@
 		82466CC71D73EEA80013B292 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CC51D73EEA80013B292 /* SearchCell.swift */; };
 		82466CC81D73EEA80013B292 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82466CC61D73EEA80013B292 /* SearchCell.xib */; };
 		82466CCB1D742EE30013B292 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82466CCA1D742EE30013B292 /* Webservice.swift */; };
+		824BDA361D87E97C00164549 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BDA351D87E97C00164549 /* Extension.swift */; };
+		824BDA3A1D88008000164549 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BDA381D88008000164549 /* UserViewController.swift */; };
+		824BDA3B1D88008000164549 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824BDA391D88008000164549 /* UserViewController.xib */; };
 		82BBDA811D752AE6009EB2D2 /* SongObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBDA801D752AE6009EB2D2 /* SongObject.swift */; };
 		82BBDA831D752E15009EB2D2 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBDA821D752E15009EB2D2 /* UserObject.swift */; };
 		8E3C889AFECB452268F89045 /* Pods_RealMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7785141CEDAA240636B211AE /* Pods_RealMusic.framework */; };
@@ -52,6 +55,9 @@
 		82466CC51D73EEA80013B292 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		82466CC61D73EEA80013B292 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		82466CCA1D742EE30013B292 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		824BDA351D87E97C00164549 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		824BDA381D88008000164549 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		824BDA391D88008000164549 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		82BBDA801D752AE6009EB2D2 /* SongObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongObject.swift; sourceTree = "<group>"; };
 		82BBDA821D752E15009EB2D2 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +173,7 @@
 		821B61D41D6EE39B0074082D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				824BDA351D87E97C00164549 /* Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 		821B61D61D6EE39B0074082D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				824BDA371D88006B00164549 /* UserViewController */,
 				8204F0C71D81096F0019A582 /* DetailViewController */,
 				821B61D91D6EE5610074082D /* SearchViewController */,
 			);
@@ -223,6 +231,15 @@
 				82466CCA1D742EE30013B292 /* Webservice.swift */,
 			);
 			path = Webservice;
+			sourceTree = "<group>";
+		};
+		824BDA371D88006B00164549 /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				824BDA381D88008000164549 /* UserViewController.swift */,
+				824BDA391D88008000164549 /* UserViewController.xib */,
+			);
+			path = UserViewController;
 			sourceTree = "<group>";
 		};
 		82BBDA7F1D752A26009EB2D2 /* Object */ = {
@@ -297,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821B61C41D6EE0590074082D /* LaunchScreen.storyboard in Resources */,
+				824BDA3B1D88008000164549 /* UserViewController.xib in Resources */,
 				82466CC81D73EEA80013B292 /* SearchCell.xib in Resources */,
 				8204F0CB1D81098D0019A582 /* DetailViewController.xib in Resources */,
 				821B61C11D6EE0590074082D /* Assets.xcassets in Resources */,
@@ -359,6 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824BDA361D87E97C00164549 /* Extension.swift in Sources */,
+				824BDA3A1D88008000164549 /* UserViewController.swift in Sources */,
 				8204F0CE1D8119140019A582 /* BWCircularSlider.swift in Sources */,
 				821B61DF1D6EE65A0074082D /* RMViewController.swift in Sources */,
 				82BBDA831D752E15009EB2D2 /* UserObject.swift in Sources */,

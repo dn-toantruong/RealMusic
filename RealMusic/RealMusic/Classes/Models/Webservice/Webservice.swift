@@ -15,7 +15,7 @@ typealias APIControllerCallBack = (success: Bool, result: [AnyObject]?, error: N
 //https://api.soundcloud.com/search?client_id=97effc2d5a8b1e15e9835c73497e6185&limit=10&offset=0&q=mot+nha
 
 class WebService: NSObject {
-    func getURLSerchName(name:String, limit:Int, offset:Int, completion: APIControllerCallBack) {
+    func getURLSearchName(name:String, limit:Int, offset:Int, completion: APIControllerCallBack) {
         let textSong = name.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
         let searchText = String(UTF8String: textSong.cStringUsingEncoding(NSUTF8StringEncoding)!)
         let parameter: [String: AnyObject] = ["client_id": Key.clientId,
